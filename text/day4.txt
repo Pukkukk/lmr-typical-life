@@ -1,0 +1,558 @@
+label fourth_1:
+    scene bg black with fade3
+    "Пьёшь много или очень много — похмелье настигнет тебя, не пытайся увернуться!"
+    window hide
+    play ambience kitchen_day fadein 2
+    posteffect chromaticaberration
+    scene bg kitchen_mc_day with fade3
+    "Я проснулся посреди кухни."
+    "Где упал, там и заснул, так сказать..."
+    "Голова дико болела, так ещё и в горле перекати-поле."
+    "Я встал на ноги и тут же слегка пошатнулся."
+    my "Да-а-а..."
+    window hide
+    stop ambience fadeout 1
+    scene bg room_mc_day with pattern angular_pattern
+    play ambience room_mc_day fadein 1
+    "Пришлось порядком порыться, чтобы найти медицинскую сумку с таблетками."
+    play sfx drinking_water
+    "Двух таблеток, думаю, будет достаточно."
+    window hide
+    scene bg room_mc_day with fade
+    posteffect none
+    "Немного обождав, мне полегчало, и я решил приготовить себе еду."
+    goto fourth_3
+    
+label fourth_2:
+    scene bg black with fade
+    "Убрать."
+    goto fourth_3    
+    
+label fourth_3: 
+    "..."
+    window hide
+    stop music fadeout 5
+    stop ambience fadeout 5
+    scene color black with fade3
+    pause 2
+    load day5 bad_end
+    
+label fourth_secret:
+
+###############################################################################
+
+    sequence ca_1 
+    {
+        show ca grin head1center hands1 legs1 with dissolve
+    }
+    
+    sequence komar_remove 
+    {
+        overlay_img remove fade 1
+    }
+    
+    sequence ag_1 
+    {
+        show ag serious head2straight legs1
+    }
+    
+    sequence ag_2 
+    {
+        show ag shocked head2straight legs1
+    }
+    
+    sequence ag_remove 
+    {
+        hide ag with dissolve
+    }
+    
+    sequence el_1 
+    {
+        show el serious head1center hands1 legs2 leather1
+    }
+    
+    sequence el_2 
+    {
+        show el grin head1center hands3 legs4 leather1
+    }
+    
+    sequence kf_1 
+    {
+        show tr smile hands1 legs1 at right with dissolve
+    }
+    
+    sequence kf_2 
+    {
+        show tr smile2 hands1 legs2
+    }
+    
+    sequence el_3 
+    {
+        hide el with dissolve
+    }
+    
+    sequence kf_3 
+    {
+        show tr smile hands3 legs1 with dissolve
+    }
+    
+    sequence club_1 
+    {
+        scene bg club_inside_zfeelz with dsprmain
+    }
+    
+###############################################################################    
+
+    mode nvl
+    scene bg black with fade3
+    "Даже если кажется, что всё идёт своим чередом, то обязательно кто-то или что-то вставит палки в колёса."
+    "Вот здесь, как мне видится, произошла такая же ситуация."
+    "И потом вы говорите, что никакого волшебства не существует?.. <w>Да я вам в жизни не поверю после всего этого!"
+    window hide
+    mode adv
+    play ambience room_mc_day fadein 2
+    scene bg room_mc_day with fade3
+    window show
+    "Когда я проснулся, у меня возникло чувство, что моя жизнь перевернулась с ног на голову одним сеансом сна."
+    "Я услышал, что на кухне кто-то есть и явно возится у плиты."
+    window hide
+    play music yamayka
+    scene cg day16_catherine_think with dissolve
+    window show
+    cag "Эээ..."
+    my "Кто ты, блять, такая?"
+    cag "Посмотри на себя сначала, долбоёб!"
+    "Я опустил голову вниз."
+    "Ёбанный в рот, я в одних трусах!"
+    my "Когда нахуй с меня пропала пижама?"
+    scene cg day16_catherine_smile with dsprmain
+    cag "Лох блять, ахаххахахахах!"
+    window hide
+    scene cg day16_catherine_smile with fade
+    window show
+    my "Так, ладно, проехали."
+    my "Всё-таки: кто ты такая?"
+    cag "Блять, Никита, у тебя мозги отшибло или я не к тому в дом вломилась через сад?"
+    my "Чё, меня Никита зовут?.."
+    cag "Наконец-то допёр, бляха-муха!"
+    cag "Всё, давай похаваем и как раз будем вправлять твои крошечные мозги."
+    window hide
+    scene bg kitchen_mc_day with pattern fade6
+    window show
+    "Что за ужас здесь творится?! В какую дурку меня положили?"
+    cag "<seq ca_1>Всё, можешь жрать."
+    "На столе было жареное месиво."
+    "Картошка, мясо, овощи..."
+    overlay_img komar
+    kmr "БУЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭ"
+    nk "ЧТО ЭТО БЛЯТЬ?"
+    show ca guilty head1center hands1 legs1
+    cag "А, не обращай внимания."
+    cag "Такие комары в Токио не редкость."
+    show ca normal head1center hands1 legs2
+    nk "<seq komar_remove>А какой сейчас, сука, год?"
+    cag "2024."
+    nk "..."
+    cag "..."
+    nk "..."
+    nk "что."
+    show ca grin4 head1center hands1 legs3
+    cag "неважно."
+    nk "Ладно, а тебя как зовут?"
+    show ca surprise head1center hands2 legs1
+    cag "Ну ты совсем ёбыч блять? Саню с Кефиром и Серым тоже к хуям забыл?"
+    nk "ДА ТЫ НА ВОПРОС ОТВЕТЬ СНАЧАЛА ЙОБАНА!"
+    show ca rage head1center hands2 legs1
+    cag "КЕТРИН НАХУЙ!"
+    nk "Воооооо, спасеба!"
+    ca "ДА НЕ ЗА ЧТО БЛЯТЬ!"
+    nk "Всё, чилльни, чё ты как истеричка?"
+    show ca sadsmile head1center hands3 legs2
+    ca "Ладно, сорян."
+    nk "Так, а кто те, которых ты выше назвала?"
+    show ca normal2 head1center hands4 legs3
+    ca "А, гениев мысли имеешь в виду?"
+    ca "Ну Саня (еблан) мой парень, Кефир там какой-то модмейкер на Сталкер, Серый бабку топором хуйнул."
+    nk "А, нихуя себе... <w>Ничего не понял."
+    show ca normal head1center hands4 legs3
+    ca "Тугодумище."
+    ca "Я вроде и так знала, что ты дебил, но не настолько."
+    nk "Да ёпта, ладно, хуй с ним."
+    nk "А вчера чё-нить было по событиям?"
+    show ca serious head1center hands1 legs1
+    ca "Вы всей группой разъебали клуб, где Эли выступала."
+    "Каво? Я же тише воды, ниже травы..."
+    nk "Пострадавшие?"
+    ca "Из наших никого. <w>Только Саня кому-то череп разъебал, но это не суть."
+    play sfx door_bell_outside_far
+    "Кто-то позвонил в дверь."
+    "Кого ко мне вообще занесло?"
+    stop sfx fadeout 1
+    window hide
+    scene bg corridor_mc_day with pattern noise_pattern
+    window show
+    "Ну-с..."
+    play sfx door_open_far
+    show drum smile head2left legs1 with dissolve
+    "Кто это?.."
+    chi "Здарова, Некит!"
+    chi "Я у тебя топор не оставлял?"
+    nk "Какой ещё топор?"
+    chi "Ну которым я..."
+    nk "А, понял. <w>Не, не видел."
+    show drum smile head2left legs2
+    chi "А, ну ладно, я пойду тогда."
+    chi "Сегодня репа через 5 часов — гитару не забудь!"
+    nk "Ладно..."
+    play sfx door_close_far
+    window hide
+    stop music fadeout 1
+    scene bg kitchen_mc_day with dissolve
+    play ambience kitchen_day fadein 1
+    window show
+    "Тьфу, блять!"
+    "Э, а где та девушка?"
+    "Даже, сука, посуду не помыла..."
+    "Ладно хоть в контейнер переложила всё, но даже не удосужилась в холодос запихнуть."
+    "Подожди, а что там у меня?"
+    play sfx fridge
+    "Так..."
+    stop sfx fadeout 1
+    "А, ебать, у меня здесь полный набор для правильного питания."
+    "Фу, блять. <w>В пизду."
+    "Я не ишак вроде, чтобы меня овощами кормить!"
+    stop ambience fadeout 1
+    window hide
+    play music fractal
+    scene bg blackblue with fade
+    window show
+    "Приведя себя в порядок и сделав все нужные дела по дому, я стал думать... <w>думу."
+    "Как я попал в будущее?"
+    "Что вообще это значит?"
+    "Это уже ад или ещё только «предбанник»?"
+    "Мои размышления и похождения по комнатам прервал взгляд на гитару."
+    "Точно, мне же сказали:"
+    window hide
+    posteffect sepia
+    scene bg corridor_mc_day with dissolve
+    show drum smile head2left legs2 with dissolve
+    window show
+    chi "Сегодня репа через 5 часов — гитару не забудь!"
+    window hide
+    posteffect none
+    scene bg blackblue with dissolve
+    window show
+    "Будет лучше позаботиться о этом заранее."
+    window hide
+    scene bg corridor_mc_day with dissolve
+    window show
+    "Рядом с телефоном лежала записная книжка."
+    "Прямо на переплёте был написан адрес: улица Тромба Навального, дом 9, подъезд 11."
+    "Видимо, это оно самое."
+    "Ладно, пора отправляться."
+    window hide
+    scene bg house_mc_day with pattern topright
+    window show
+    "Воу, мой дом нисколечко не изменился."
+    "Даже интересно: а сейчас голуби срут на крыши или они уже эволюционировали срать людям точечными ударами на их смартфоны?"
+    "Или всех голубей в Японии сожрали киски?"
+    window hide
+    scene bg tokyo_street_day with pattern fade11
+    window show
+    "В этот раз на улице было не сказать что дохуища народу."
+    "Хотя я даже не ебу какой сегодня день недели."
+    "Ну и похуй."
+    window hide
+    stop music fadeout 1
+    scene bg tokyo_street_day with fade
+    window show
+    "Разобравшись и подойдя к нужному подъезду, меня остановил какой-то типок."
+    play music sudden_trip
+    show ag normal head2straight legs1 with dissolve
+    ag "Вы можете задонатить мне на мод, пожалуйста?"
+    "Какой, блять, мод? <w>За них ещё и платить стали в это ебаное время?"
+    nk "Нет, съеби, старина!"
+    ag "<seq ag_1>Так, я не понял..."
+    ag "То есть когда мне нужна гречка блять, ты, нищета ебаная, будешь отказывать?"
+    ag "Да я тебя блять в сборку свою не добавлю нахуй за такое отсутствие лизания жопы!"
+    nk "Гречка? <w>Ты берега океанов не перепутал?"
+    ag "Ну и пошёл нахуй, в сборку свою я тебя не добавлю, лошара!"
+    nk "Полюлюкай мне ещё тут..."
+    nk "УШЁЛ, БЛЯТЬ, В СТОРОНУ!"
+    "<seq ag_2>Я оттолкнул<seq ag_remove> этого конченного и начал заходить внутрь."
+    window hide
+    stop music fadeout 1
+    scene bg eli_repbase with dissolve
+    volume music 0.25 fade 0
+    play music popurri
+    window show
+    "Я прошёл в небольшую комнатку, где сидела красивая девушка, играющая какой-то неизвестным мне мотив на гитаре."
+    volume music 1.0 fade 1
+    nk "Привет..."
+    "Загадочно протянул я."
+    stop music fadeout 1
+    show el surprise head1center hands1 legs1 leather1 with dissolve
+    elg "О, привет, Никита!"
+    "Удивлённо и оживлённо ответила она."
+    "Даже слишком я бы сказал."
+    play music you_know_this_is_the_end
+    elg "Так... <seq el_1><w>Ну-ка, объясни, что вы вчера всей компанией умудрились сделать в клубе?"
+    "Ну... Я-то откуда знаю?"
+    elg "Мне пришлось отвалить нехилую часть бабок, чтобы уладить конфликт и дать нам возможность продолжать давать концерты."
+    nk "Эээ..."
+    show el dontlike head1center hands1 legs2 leather1
+    elg "Не экай тут!"
+    elg "Хотя ладно, хуй с тобой, ты всё равно там только пару кружек пива разъебал и пошёл с пацанами тусить."
+    nk "А зачем тогда придралась в принципе?"
+    show el grin2 head1center hands4 legs3 leather1
+    elg "Па преколу, ежжи!"
+    "Ладно, наверное пришло время спросить..."
+    nk "Ммм... А как тебя зовут?"
+    show el surprise head5up hands1 legs4 leather1
+    elg "С утра Эли вроде звали!<seq el_2>"
+    el "А что, хочешь меня?"
+    "В её глазах засиял огонёк."
+    nk "Нет."
+    show el upset head1center hands3 legs2 leather1
+    el "Эх, а могли бы..."
+    el "У меня в кошельке как раз лежит..."
+    nk "Ладно, насрать."
+    nk "А где народ?"
+    show el sadsmile head1center hands1 legs1 leather1
+    el "Да я их вчера отругала пока сама была под алкоголем слегка, поэтому и не жду, что они придут."
+    nk "Ко мне какой-то пацан приходил и сказал, что у нас репа будет."
+    el "А, так это Серый был. Он всегда после пиздеца не против вернуть всё на круги своя."
+    window hide
+    posteffect sepia
+    scene bg corridor_mc_day with dissolve
+    show drum smile head2left legs1 with dissolve
+    window show
+    sr "Я у тебя топор не оставлял?"
+    window hide
+    posteffect none
+    scene bg eli_repbase with dissolve
+    show el sadsmile head1center hands1 legs1 leather1 with dissolve
+    "Ага, значит так..."
+    "Чё ж у этого пацанёнка за компания ебланов?"
+    nk "Всё, понял."
+    nk "Просто после вчерашнего голова не своя как будто."
+    show el smile hands3 legs1 leather1
+    el "Это норма..."
+    "Не успела Эли договорить, как вошёл один из членов команды."
+    play sfx door_open_keys_light_outside
+    kfm "<seq kf_1>Хоп, всем здоровиньки булы!"
+    show el normal head3right hands3 legs2 leather1
+    el "О, прива!"
+    "Блять, а это теперь кто?"
+    el "Короче, Кефир, к тебе претензий по вчерашнему поводу я снимаю, так как ты много помогал по клубу в принципе и за тебя я платила меньше всех."
+    el "Но в следующий раз уже не смогу."
+    show tr normal hands1 legs2 yes
+    kf "Понял, не дурак."
+    "Ага, его Кефир зовут... <w>Ну и кличка же..."
+    kf "О, Гомес!"
+    kf "Хорошо вчера навели шухеру,<seq kf_2> не так ли?"
+    nk "Да, было неплохо..."
+    "Я бы хоть знал о происходящем!"
+    show tr normal hands1 legs1
+    kf "Что сегодня на повестке дня?"
+    show el normal head1center hands2 legs1 leather1
+    el "Будем репетировать песню под чиллом."
+    show tr smile hands2 legs1
+    kf "О, вот это по-нашему! <w>Ждём остальных, получается."
+    stop music fadeout 1
+    window hide
+    hide el with dissolve
+    hide tr with dissolve
+    mode nvl
+    play music solution
+    pause 3.5
+    "Понятное дело, я не знал как играть на гитаре."
+    "Знаю только как держать этот музыкальный инструмент, а дальше мои полномочия..."
+    "В итоге, отыграли мы отвратительно, каждый мне делал свои замечания."
+    el "Мозги проспиртовал?"
+    clear
+    "Пришёл тот самый Серый, потом ещё один пацан (его все называли Саней)."
+    "Небольшая разминочка с каждым, пачка охуительных историй от последнего и мы начали репать."
+    "Играли остальные, конечно, будь здоров... <w>в хорошем смысле этого слова."
+    "Мне до них вообще как до Китая пешком."
+    window hide
+    time sunset
+    mode adv
+    scene bg eli_repbase with fade
+    show git upset head1center hands1 legs1 with dissolve
+    sn "Чёт ты сегодня вообще никакущий..."
+    "Попробуем подыграть..."
+    nk "Да вчера день таким дерьмом был, я ебал!"
+    show git dontlike head1center hands2 legs2
+    sn "Да у тебя вечно дни как один и говнище!"
+    nk "неважно."
+    show git smile head1center hands1 legs2
+    sn "обоюдненько."
+    show git laugh head1center hands1 legs1
+    sn "Бля, Серый, помнишь, как мы в зале разъебали все столы?"
+    "И тут началось..."
+    stop music fadeout 2
+    window hide
+    time night
+    volume music 0.35 fade 0
+    posteffect sepia
+    scene bg club_inside with fade2
+    play music skillet
+    show el laugh hands3 legs1 leather3 with dissolve
+    "Мы стояли с Эли и просто разговаривали по душам."
+    "Делились впечатлениями после концерта и удивлялись собравшемуся обществу в который раз."
+    "Но, как и всегда, кучка ебланов найдёт себе чем позаниматься."
+    play sfx wood_break
+    show el shocked hands3 legs2 leather3
+    "Вот пошёл стул об голову Серого, у которого в руках откуда-то, блять, топор."
+    play sfx face_hit
+    "Затем рандомный стол пошёл по еблищу работнику клуба..."
+    "Но зато Кефир стоит как статист и каждую хуйню чётко считывает своей сетчаткой глаз."
+    "Пизды, наверное, уже не получит."
+    play sfx glass_break
+    "И уже после всего пошли кружки, стаканы и бутылки из-под спиртного..."
+    "А Эли<seq el_3> пошла разбираться с происходящим пиздецом..."
+    window hide
+    time sunset
+    stop music fadeout 2
+    posteffect none
+    scene bg eli_repbase with fade2
+    volume music 1 fade 1
+    "Да... <w>Вот это жесть."
+    "Я в жизни то не видел такого говна, но чтобы аж так алкоголь крышу срывал..."
+    show tr smile hands2 legs1 with dissolve
+    kf "Никита, пока ты тут слушал гениальные истории, я связался с клубом и..."
+    kf "Короче, там скоро будет выступление одной ебейшей группы, но билеты только для нас двоих."
+    kf "Им, так понимаю, и без нас хорошо."
+    nk "И не поспоришь..."
+    "Серый, Саня и Эли чиллили на одном диване и зависали в мобилках."
+    "Кажется, Кефир не врёт."
+    "Ладно, здесь, видимо, в группе один рассос и чайный гриб."
+    nk "Сейчас самое время."
+    show tr normal hands1 legs2
+    kf "Согласен, погнали."
+    hide tr with dissolve
+    "Мы аккуратненько прошли к выходу."
+    kf "Ребят, мы с Никитой по домам!"
+    el "Небось в бар погнали херачиться?"
+    nk "Не в этот раз!"
+    sn "Идите уже! <w>Удачи вам!"
+    window hide
+    time night
+    play ambience outside_night fadein 2
+    scene bg club_outside_night_people with fade
+    show tr normal hands1 legs1 with dissolve
+    kf "Сделай ебало кирпичом и больше ничего."
+    "Безразличность — есть!"
+    "Мы подошли ко входу, там стоял мужчина в деловом костюме."
+    show tr normal hands1 legs1 at cleft with dissolve
+    show mih serious head1center legs1 at cright with dissolve
+    wk "Кефир?"
+    kf "Он самый."
+    wk "По договорённости?"
+    show tr normal hands2 legs2
+    kf "Сегодня — да."
+    show mih normal head1center legs2
+    wk "Проходите, быстро."
+    window hide
+    stop ambience fadeout 1
+    scene bg club_inside_crowd with pattern topright
+    play ambience club
+    "А тут нифиговенько то всё выглядит!"
+    "Даже после того погрома, о котором мне рассказывали."
+    kf "<seq kf_3>Готов немного удивиться?"
+    nk "Исполняй."
+    kf "Просто наблюдай и кайфуй!"
+    hide tr with dissolve
+    "И что сейчас будет?"
+    window hide
+    scene bg club_inside_crowd with fade
+    "Прошло 5 минут и на сцену вышел ведущий."
+    "Объявил какую-то группу с дурацким названием Z FEEL-Z (пришлось спросить у других находящихся здесь) и поспешил уйти со сцены."
+    "А из гриммёрки выходят..."
+    trigger club_1
+    el "Всем привет! Надеюсь, вы нас ждали и нашли время прийти сюда!"
+    "Нихуя себе они исполняют... Это когда же они успели..."
+    "Но «сюжетный» поворот действительно ахуенный, ничего не скажешь!"
+    el "Просим тишины для нашего зажигания!"
+    stop ambience fadeout 3
+    "Что же, если это моё будущее..."
+    "То я хочу остаться здесь навсегда!"
+    "Насрать, что я не успел вотворить в жизнь многие свои хотелки..."
+    "Насрать, что я не найду отсюда выход..."
+    "Но самое главное я получил..."
+    "Я получил пиздатую компанию друзей!"
+    shouts "Дава-а-а-ай!"
+    window hide
+    pause 2
+    unlock_ending alone_secret
+    goto fourth_secret_end
+    
+    
+    
+label fourth_secret_end:
+
+    creditsmode true
+    play music secret_end forceloop false
+    
+    pause 9
+    
+    rollcredits 139
+    {
+    pause 126
+    scene color black with dissolve 12 true skip
+    }
+    
+    pause 1
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

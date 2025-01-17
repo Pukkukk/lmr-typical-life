@@ -1,0 +1,180 @@
+---
+  scenarios: 
+    day1: text/day1.txt
+    day2: text/day2.txt
+    day3: text/day3.txt
+    day4: text/day4.txt
+    day5: text/day5.txt
+    end_bad_1: text/end_bad_1.txt
+    
+  sound:
+    yamayka: music/yamayka.mp3
+    skillet: music/skillet.mp3
+    
+    glass_break: sfx/glass_break.mp3
+    wood_break: sfx/wood_break.mp3
+    secret_end: music/secret_end.mp3
+    
+# пикчи, которые можно выводить    
+  overlay_imgs:
+    komar: images/komar.png
+# пикчи, которые можно выводить 
+
+  help:
+    credits: |
+        <line-height=50%><style="credits-head">Разработчик:</style>
+        <style="credits-name">Кефир</style>
+        
+       
+       
+        <line-height=50%><style="credits-head">Благодарности:</style>
+        <style="credits-name"><u>Soviet Games</style></u>
+        
+        <style="credits-name"><u>LMR Scenario Editor</style></u>
+        
+        <style="credits-name">Саня Альцгеймер</style>
+        
+        <style="credits-name">Gomes</style>
+        
+        <style="credits-name">Серый</style>
+        
+        <style="credits-name">Петька Иванович</style>
+    
+    
+  entryPoint: day1
+  
+  notes:
+    note1: "Эмпатия — способность чувствовать эмоции другого человека для понимания его душевного состояния."    
+
+  chibis:
+    alco: chibis/chibi_alco.png
+
+
+  narrators:
+    colw:
+      name: "Коллега"
+      advColor: "#91483CFF"
+      nvlColor: "#EC7070FF"
+      simpleAdv: false
+      
+    colm:
+      name: "Коллега"
+      advColor: "#4E4E52FF"
+      nvlColor: "#877B79FF"
+      simpleAdv: false
+      
+    boss:
+      name: "Начальница"
+      advColor: "#232366FF"
+      nvlColor: "#5B5F8BFF"
+      simpleAdv: false 
+    
+    kmr:
+      name: "Комар"
+      advColor: "#6B8737FF"
+      nvlColor: "#6B8737FF"
+      simpleAdv: false
+
+    nk:
+      name: "Никита"
+      advColor: "#4E322BFF"
+      nvlColor: "#8D5E55FF"
+      simpleAdv: false 
+      
+    sr:
+      name: "Серый"
+      advColor: "#505050FF"
+      nvlColor: "#949494FF"
+      simpleAdv: false 
+    
+    kf:
+      name: "Кефир"
+      advColor: "#0D6E24FF"
+      nvlColor: "#1B541BFF"
+      simpleAdv: false
+    
+    kfm:
+      name: "Парень"
+      advColor: "#0D6E24FF"
+      nvlColor: "#1B541BFF"
+      simpleAdv: false
+    
+    sn:
+      name: "Саня"
+      advColor: "#505050FF"
+      nvlColor: "#949494FF"
+      simpleAdv: false 
+      
+    wk:
+      name: "Работник клуба"
+      advColor: "#434343FF"
+      nvlColor: "#707070FF"
+      simpleAdv: false       
+      
+  collections:      
+    tracks:
+      green_and_orange:
+      ono_sendai:
+      city_sleeps:
+      pancakes:
+      the_door_to_nowhere:
+      awkwardness:
+      everlasting_reference:
+      free_me:
+      arcade_night:
+      yokohama:
+      perfect_blue:
+      thoughts:
+      a_painful_story:
+      to_die_or_not_to_die:
+      
+      
+      yamayka: Ямайка
+      fractal:
+      sudden_trip:
+      popurri:
+      you_know_this_is_the_end:
+      solution:
+      skillet: Sick of It
+      secret_end: Саня на Асфальте
+  
+    endings:
+      alone_bad: Одиночка, плохая концовка
+      alone_neutral: Одиночка, нейтральная концовка
+      alone_secret: Одиночка, секретная концовка
+      girl_bad: Девушка, плохая концовка
+      girl_good: Девушка, хорошая концовка
+      
+  menu:
+    bg:
+      1:
+        name: kagome_room_day
+        condition: "datetime.hour >= 7 && datetime.hour < 16"
+        twirl: false
+        particles: true
+        blur: false
+        noise: true       
+      2: 
+        name: ryokan_street_sunset
+        condition: "datetime.hour >= 16 && datetime.hour < 22"
+        twirl: false
+        particles: true
+        blur: false
+        noise: true
+      3:
+        name: warehouse_out  
+        condition: "datetime.hour >= 22 || datetime.hour < 7"
+        twirl: false
+        particles: true
+        blur: false
+        noise: true        
+    tracks:
+      1:
+        name: green_and_orange
+        condition: "datetime.hour >= 7 && datetime.hour < 16"
+      2:
+        name: ono_sendai
+        condition: "datetime.hour >= 16 && datetime.hour < 22"
+      3:
+        name: city_sleeps
+        condition: "datetime.hour >= 22 || datetime.hour < 7"     

@@ -1,0 +1,124 @@
+label first:
+
+    sequence pain 
+    {
+        posteffect chromaticaberration
+    }
+
+    time night
+    play ambience corridor_mc_night fadein 4
+    scene bg corridor_mc_night2 with fade3
+    "Вот я и вернулся домой."
+    "Кажется, я слишком сильно перепил сегодня..."
+    "Хотя какое мне дело? Да даже хоть кому-то другому до этого есть дело?"
+    "Но я обещал себе, что такого больше не повторится..."
+    stop ambience fadeout 1
+    window hide
+    play ambience room_mc_night fadein 1
+    scene bg room_mc_night with pattern right_pattern
+    window show
+    "Кровать, стул, столик, шкаф."
+    "Типичный набор для любого жильца комнаты, не так ли?"
+
+    "Только сейчас они мне кажутся такими...<w><seq pain> расплывчатыми."
+    "Резкая головная боль помогла мне пошатнуться и почти не упасть."
+    "Нужно опохмелиться?<w> Не верится, что я настолько не жалел свой организм."
+    "Хотя... Если посмотреть на мою историю трат в мобильном приложении банка, то только это и приходит на ум."
+    window hide
+    posteffect none
+    menu
+    {
+        text1: "Выпить"
+        {
+        $lp_ca+=1
+        chibi alco
+        goto first_1    
+        }
+        text2: "Лечь спать"
+        {
+        goto first_2    
+        }
+    }
+    
+    # Первый выбор, дающий +1 к плохой концовке
+label first_1:
+    posteffect chromaticaberration  
+    "И всё-таки важно вернуть себя в нормальное состояние перед сном."
+    stop ambience fadeout 1
+    window hide
+    play ambience kitchen_night fadein 1
+    scene bg kitchen_mc_night with dissolve
+    window show
+    "Включив свет, я начал поиски алкогольных смесей."
+    window hide
+    scene bg kitchen_mc_night with fade
+    window show
+    "После 5 минут поисков была найдена бутылка шампанского и бутылка саке."
+    "Шампанское мне подарила мать на моё двадцатилетие."
+    "А саке, найденное в холодильнике, я планировал выпить завтра."
+    "Что же, пришло время и для одного, и для другого."
+    "Саке пошло первым."
+    window hide
+    play sfx drinking_water
+    pause hard 10
+    stop sfx fadeout 2
+    window show
+    "Вкус дешёвого алкоголя... <w>такой привычный и в то же время раздражающий."
+    window hide
+    scene bg kitchen_mc_night with fade
+    window show
+    "Опустошив первую бутылку, в ход пошла и вторая."
+    window hide
+    play sfx drinking_water
+    pause hard 10
+    window show
+    stop sfx fadeout 2
+    "Бульк-бульк, хлюп-хлюп..."
+    "Вот и запасы исчерпали себя..."
+    window hide
+    posteffect none
+    scene bg kitchen_mc_night with fade
+    window show
+    "Через некоторое время меня отпустило."
+    my "Теперь-то можно и на боковую."
+    stop ambience fadeout 2
+    window hide
+    play ambience room_mc_night fadein 2
+    scene bg room_mc_night with pattern left_pattern
+    window show
+    "Кровать, милая и мягкая кровать..."
+    window hide
+    stop ambience fadeout 5
+    scene color black with fade3
+    pause 2
+    load day2 second
+    
+    # Второй выбор, не дающий ничего 
+label first_2:
+    posteffect chromaticaberration  
+    "Возможно, произошедшие сегодня события напоминают мне о важности правильно образа жизни."  
+    "При сне длительностью 4 часа, ежедневной сверхурочной работой, постоянными ланчами с лапшой быстрого приготовления и жидкостью в виде пива так и вовсе неудивительно."
+    "В конечном итоге, утро вечера мудреннее, как ни крути."
+    "А сон поможет избавиться от всех проблем<w>, хоть и на время."
+    window hide
+    stop music fadeout 5
+    stop ambience fadeout 5
+    scene color black with fade3
+    pause 2
+    load day2 second
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
