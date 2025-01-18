@@ -18,18 +18,49 @@ label fourth_1:
     play sfx drinking_water
     "Двух таблеток, думаю, будет достаточно."
     window hide
-    scene bg room_mc_day with fade
     posteffect none
+    scene bg room_mc_day with fade
     "Немного обождав, мне полегчало, и я решил приготовить себе еду."
+    window hide
     goto fourth_3
     
 label fourth_2:
     scene bg black with fade
     "Убрать."
+    window hide
     goto fourth_3    
     
 label fourth_3: 
-    "..."
+    scene bg kitchen_mc_day with pattern right_pattern
+    "Еда... <w>У меня есть только один вариант — рамен."
+    "Хотя..."
+    play sfx fridge
+    "О, айсберг есть."
+    stop sfx fadeout 1
+    "Порежем и будет хоть капелька полезного в приёме пищи..."
+    window hide
+    scene bg kitchen_mc_day with fade
+    "Жизненная энергия успешно восстановлена!"
+    "Помыть посуду, постирать и погладить вещи, помыться... или подмыться?"
+    play sfx phone_ringing_outside
+    "Мои размышления были прерваны звонком."
+    "Опять нужно выйти на работу?"
+    window hide
+    stop ambience fadeout 2
+    stop loop fadeout 2
+    scene bg corridor_mc_day with dissolve
+    play sfx phone_ringing
+    stop sfx
+    play sfx phone_take
+    my "Алло?"
+    
+    
+    
+    
+    
+    
+    
+    
     window hide
     stop music fadeout 5
     stop ambience fadeout 5
