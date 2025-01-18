@@ -46,13 +46,30 @@ label fourth_3:
     "Мои размышления были прерваны звонком."
     "Опять нужно выйти на работу?"
     window hide
-    stop ambience fadeout 2
+    stop ambience fadeout 1
     stop loop fadeout 2
     scene bg corridor_mc_day with dissolve
-    play sfx phone_ringing
+    play ambience corridor_mc_day fadein 2
     stop sfx
     play sfx phone_take
     my "Алло?"
+    colm "Привет, сегодня не особо занят?"
+    my "Да не особо."
+    colm "Можем тогда встретиться в парке недалеко от меня? Тебе на нём пару станций на метро ехать, если что."
+    my "Время?"
+    colm "Давай в полдень."
+    my "М-м-м... Можно в 13?"
+    colm "Обед не хочешь пропускать?"
+    my "Есть такое..."
+    colm "Хорошо, я тогда тоже поем. <w>До встречи."
+    play sfx phone_put
+    "Блин, я вообще не хотел сегодня никуда выходить."
+    "Но придётся!"
+    "Какой ужас!"
+    window hide
+    stop ambience fadeout 1
+    scene bg room_mc_day with fade 
+    ""
     
     
     
