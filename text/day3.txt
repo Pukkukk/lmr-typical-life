@@ -246,7 +246,7 @@ label third_1:
     pause hard 15
     stop sfx fadeout 2
     window show
-    overlay_color #000000 fade 10 opacity 0.5 skip
+    overlay_color #000000 fade 5 opacity 0.5 skip
     "На вкус не особо отличалось от магазинных вариантов, только было намного крепче."
     my "Ох, ну и вдарило же!.."
     "Посмотрел на бутылку — за один заходил выпил чуть больше половины."
