@@ -36,8 +36,13 @@ label fourth_3:
 
     sequence sfx_1 
     {
-        volume sfx 0.65
-        play sfx phone_ringing_outside
+    volume sfx 0.65
+    play sfx phone_ringing_outside
+    }
+    
+    sequence colm_1 
+    {
+    show mi grin head1center legs1 dress with dissolve
     }
     
 ###############################################################################    
@@ -86,7 +91,7 @@ label fourth_3:
     "Только лежать и..."
     "Спать..."
     "Может, вздремнуть?<w> Можно."
-    stop ambience fadeout 1
+    stop ambience fadeout 2
     window hide
     scene bg blackblue with fade2
     "Мне снилось, что я лечу по вымышленному миру, полным технологий."
@@ -117,21 +122,184 @@ label fourth_3:
     play sfx phone_put
     volume music 1 fade 1
     "Пора ускоряться!"
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    window hide
+    scene bg house_mc_day with pattern left_pattern 0.5
+    "Так, метро!"
+    "Мне нужно метро!"
+    window hide
+    scene bg tokyo_street2_day_people with pattern bottomleft 0.5
+    "Почему станция так далеко?"
+    "Господи!"
+    window hide
+    scene bg railway_station_day_people with pattern topright 0.5
+    "Твою мать! <w>Здесь очередь на поезда!"
+    "Надо пробиваться!"
+    "А вот надо ещё умудриться это сделать!"
+    window hide
+    scene bg train_day with pattern blinds 0.5
+    "Почему ещё не придумали скоростные поезда?"
+    "А-а-а, чёрт!"
+    "И сейчас ждать, пока эта дребезжащая и шумная тарахтелка вальяжно рассекает по всему городу..."
+    window hide
+    play sfx run_breath
+    scene bg garden_day with dissolve
+    "Забежав в парк, я увидел коллегу, сидящего на скамейке."
+    colm "Давай ко мне, опаздывающий!"
+    stop music fadeout 2
+    play ambience garden_day fadein 2
+    "Быстрым шагом я дошёл<seq colm_1> до него и сел рядом с ним."
+    stop sfx fadeout 2
+    colm "Успел?"
+    my "Да, успел!"
+    "С небольшой иронией сказал я."
+    colm "Ладно, пропустил, так пропустил, ничего поделать уже не можем."
+    my "Так, зачем звал?"
+    show mi normal head1center legs2 dress
+    colm "Просто поговорить и погулять."
+    "Ничего себе! <w>Такое может быть?"
+    my "Эх, не привык я так делать..."
+    colm "Не понял."
+    my "Я имею в виду без конкретной цели."
+    show mi smile head1center legs1 dress
+    colm "А, ну это всегда происходит."
+    colm "Я хотел тебя спросить об одном проишествии..."
+    "Раз это именно он, то у него что-то серьёзное."
+    show mi serious head2left legs1 dress
+    colm "Ко мне вчера приходил один неизвестный человек и спрашивал за потерявшуюся девочку."
+    colm "Представлялся его братом, а девочка была с соседней префектуры."
+    my "Какая-то странная ситуация."
+    colm "Честно, я не на шутку испугался."
+    colm "Не каждый день ко мне кто-то приходит."
+    colm "Тем более я потом проследил за ним и увидел, что у него собственная машина есть."
+    my "Что-то тебе везёт оказываться в неудобных ситуациях..."
+    "Хотя... у меня было похожее. <w>Ну почти."
+    show mi normal2 head2left legs2 dress
+    colm "Понятное дело, я ему объяснил, что никаких «бесхозных» девчушек не улице не видел."
+    colm "Он попытался описать её внешность и спросить ещё раз, но даже с этими данными ничего не смог сказать ему."
+    colm "В принципе, это я и хотел рассказать."
+    my "Надеюсь, с девочкой всё станется хорошо."
+    show mi smile head2left legs2 dress
+    colm "Я тоже верю в хорошую концовку этого дела."
+    my "Слушай, а ты не помнишь..."
+    window hide
+    scene bg garden_day with fade
+    "И так мы проболтали ещё с час времени и начали думать куда пойти."
+    show mi normal head1center legs1 dress with dissolve
+    colm "Ну идти даже особо и некуда за исключением парка аттракционнов и бара."
+    colm "Выбор, пожалуй, переложу на твои плечи."
+    window hide
+    menu
+    {
+        text1: "Парк аттракционов"
+        {
+        goto fourth_4    
+        }
+        text2: "Бар"
+        {
+        $lp_ca+=1
+        chibi alco
+        goto fourth_5   
+        }
+    }
+
+label fourth_5:
+    "..."
     window hide
     stop music fadeout 5
     stop ambience fadeout 5
     scene color black with fade3
     pause 2
     load day5 bad_end
+    
+    
+    
+
+    
+label fourth_4:  
+    my "Давай сходим в парк."
+    show mi grin head1center legs1 dress
+    colm "Хочешь почувствовать себя ребёнком? <w>Ну-ну!"
+    my "А почему бы и нет?"
+    colm "Тоже верно."
+    colm "Погнали."
+    window hide
+    stop ambience fadeout 1
+    scene bg attraction_park_people with fade
+    play music sunset_horizons
+    "Мне говорили, что дети — цветы жизни."
+    "В каких-то ситуациях это утверждение неверно."
+    "Но сейчас я его полностью понимаю."
+    "Радостные (и не очень) родители со своими детьми бегают по всем ларькам подряд и смеются."
+    "А мы в лице двух одиноких взрослых шлялись где только можно и наблюдали всю эту картину."
+    colm "Воспоминания не нахлынули ещё?"
+    show mi smile head1center legs1 dress with dissolve
+    colm "Я думаю, ты здесь уже был в детстве."
+    my "Не угадал."
+    show mi surprise head1center legs1 dress
+    "Коллега сильно удивился."
+    colm "Да ладно?"
+    my "Мои родители предпочитали ездить по всей Японии, а не задерживаться на изучении одного места."
+    my "Так что каждые каникулы я либо купался в разных <note=note101>онсэнах</note>, либо бродил по пляжам и холмистой местности."
+    show mi upset head1center legs2 dress
+    colm "Да..."
+    colm "Жаль тебя."
+    my "Ничего страшного."
+    my "Зато много чего могу рассказать о местах нашей страны."
+    show mi grin head2left legs1 dress
+    colm "А ну-ка блесни своими знаниями!"
+    my "Ну, например..."
+    window hide
+    time sunset
+    scene bg garden_sunset with fade
+    "Вдоволь пообщавшись и подискутировав, я возвращался домой через уже обычный парк."
+    "Его обворожительность вечером особенно стала выделяться."
+    my "Ну и красиво же бывает на этом свете!"
+    window hide
+    scene bg tokyo_street2_sunset with pattern fade11
+    "Дорога была дальней, в метро куча людей ехала по домам."
+    "Среди них я не был исключением."
+    "Даже сейчас понимаю, что достаточно приятно провёл эти выходные."
+    window hide
+    stop music fadeout 1
+    scene bg house_mc_sunset with dissolve
+    play ambience outside_sunset fadein 2
+    "Любые события насыщают нашу жизнь."
+    "Неважно, что они могут быть направлены на усложнение нашей жизни."
+    "Неважно, что многие не несут особого смысла."
+    "Но именно из-за них мы начинаем чувствовать этот мир иначе."
+    "Даже мелочная ситуация поможет переосмыслить все свои действия."
+    "Поэтому старайтесь дышать полной грудью, пока вы ещё... <w>живы, в конце то концов."
+    "Берите от жизни столько, сколько сможете."
+    "А я..."
+    "А что я?"
+    "Я продолжу существовать в этом мире, как и все другие 5 миллиардов мне подобных."
+    "Увы, это была моя история."
+    "История маленького, ничего не значащего человека в глобальных масштабах."
+    "Но свою историю сможете писать только вы!"
+    "Действуйте, у вас есть все шансы!"
+    "А сейчас у меня будет ужин, вынужден откланяться."
+    window hide
+    unlock_ending alone_neutral
+    stop ambience fadeout 5
+    pause 6
+    play sfx door_open_keys_light
+    pause 5
+    play sfx door_close_keys
+    pause 4
+    goto neutral_end
+    
+label neutral_end:
+    creditsmode true
+    play music summertime forceloop false
+    pause 47
+    rollcredits 233
+    {
+    pause 203
+    scene color black with dissolve 30 true skip
+    }
+    
+    
+    
     
 label fourth_secret:
 
