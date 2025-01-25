@@ -126,6 +126,7 @@
       perfect_blue:
       thoughts:
       the_finest_hour:
+      sunset_horizons:
       a_painful_story:
       to_die_or_not_to_die:
       
@@ -143,8 +144,8 @@
       alone_bad: Одиночка, плохая концовка
       alone_neutral: Одиночка, нейтральная концовка
       alone_secret: Одиночка, секретная концовка
-      girl_bad: Девушка, плохая концовка
-      girl_good: Девушка, хорошая концовка
+      # girl_bad: Девушка, плохая концовка
+      # girl_good: Девушка, хорошая концовка
       
   menu:
     bg:
