@@ -88,7 +88,7 @@ label second:
     window show
     "Вот и моё место работы — здание Кобаяши Корпорейшн."
     "У матери были хорошие связи с некоторыми людьми из этой компании, поэтому я туда попал без дополнительного образования."
-    "Правда, пришлось расплатиться и несколько месяцев жить на одних заварных раменах..."
+    "Правда, пришлось расплатиться и несколько месяцев жить на одних заварных <note=note3>раменах</note>..."
     stop ambience fadeout 1
     window hide
     play ambience corporation_in_day fadein 1
@@ -251,27 +251,30 @@ label second:
     window show
     "Подходя к повороту, я заметил что-то находящееся рядом с мусорным баком."
     "Может, кому-то было лень закинуть мусорный мешок в контейнер?"
-    window hide
-    menu
-    {
-    text1: "Подойти [work in progress]"
-        {
-        goto second_1    
-        }
-    text2: "Проигнорировать"
-        {
-        goto second_2   
-        }
-    }
+    goto second_2
     
-label second_1:
-    "Этот выбор находится в разработке и не может быть воспроизведён."    
-    window hide
-    stop music fadeout 5
-    stop ambience fadeout 5
-    scene color black with fade3
-    pause 2
-    load day5 bad_end
+###############################################################################    
+    # window hide
+    # menu
+   #  {
+    # text1: "Подойти [work in progress]"
+        # {
+        # goto second_1    
+        # }
+    # text2: "Проигнорировать"
+        # {
+        # goto second_2   
+        # }
+    # }
+    
+# label second_1:
+    # "Этот выбор находится в разработке и не может быть воспроизведён."    
+    # window hide
+    # stop music fadeout 5
+    # stop ambience fadeout 5
+    # scene color black with fade3
+    # pause 2
+    # load day5 bad_end
     
 ###############################################################################    
     
@@ -366,4 +369,4 @@ label second_2:
     
     
     
-    
+    раме
