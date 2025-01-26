@@ -17,17 +17,32 @@ label fourth_1:
     "Пришлось порядком порыться, чтобы найти медицинскую сумку с таблетками."
     play sfx drinking_water
     "Двух таблеток, думаю, будет достаточно."
+    stop sfx fadeout 2
     window hide
     posteffect none
     scene bg room_mc_day with fade
     "Немного обождав, мне полегчало, и я решил приготовить себе еду."
     window hide
+    stop ambience fadeout 1
     goto fourth_3
     
 label fourth_2:
-    scene bg black with fade
-    "Убрать."
+    scene bg black with fade3
+    "Сны бывают разными."
+    "Одни могут быть иррациональными и не подчиняться никаким общепризнанным законам."
+    "Другие же предсказывать будущее и являться пророческими."
+    "Мне же всегда снилась какая-то муть."
+    "Даже если я её так и назвал, то она всегда была страшной."
     window hide
+    play ambience room_mc_day fadein 3
+    scene bg room_mc_day with fade3
+    "Проснулся в каплях пота от ярких лучей света, проникающих в мою спальню."
+    "Начало дня могло быть и получше, но тоже ничего..."
+    play sfx stomach_grumble
+    "Надо поесть..."
+    window hide
+    stop ambience fadeout 1
+    stop sfx fadeout 2
     goto fourth_3    
     
 label fourth_3: 
@@ -47,6 +62,7 @@ label fourth_3:
     
 ###############################################################################    
 
+    play ambience kitchen_day fadein 2
     scene bg kitchen_mc_day with pattern right_pattern
     "Еда... <w>У меня есть только один вариант — рамен."
     "Хотя..."
