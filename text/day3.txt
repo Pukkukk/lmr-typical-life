@@ -230,6 +230,7 @@ label third:
         }
     text2: "Выпить позже"
         {
+        $lp_ca-=1
         $d5_saya = true
         goto third_2   
         }
@@ -278,20 +279,33 @@ label third_3:
     {
       load day4 fourth_secret 
     }
+    else if $lp_ca>=1
+    { 
+      load day4 fourth_1 
+    }
+    else if $d5_saya
+    {
+      load day4 fourth_2 
+    }
     # Переход на секретный рут
     
     
     # Переход с выбора, не дающий ничего взамен
-    if $d5_saya
-    {
-      load day4 fourth_2 
-    }
+   # if $d5_saya
+   # {
+   #   load day4 fourth_2 
+   # }
     # Переход с выбора, не дающего ничего взамен
+    
+    # load day4 fourth_secret — понятно что
+    # load day4 fourth_1 — выпил
+    # load day4 fourth_2 — не выпил
+    
     
     
     # Переход с выбора, дающий +1 к плохой концовке 
-    if $lp_ca>=1
-    {
-      load day4 fourth_1 
-    }
+   # if $lp_ca>=1
+   # { 
+   #   load day4 fourth_1 
+   # }
     # Переход с выбора, дающий +1 к плохой концовке 
