@@ -1,3 +1,11 @@
+label fourth_0:
+    ww
+    
+    
+    
+    
+
+
 label fourth_1:
     scene bg black with fade3
     "Пьёшь много или очень много — похмелье настигнет тебя, не пытайся увернуться!"
@@ -217,15 +225,82 @@ label fourth_3:
         goto fourth_5   
         }
     }
-
+    
 label fourth_5:
-    "..."
+    my "Я выбираю напиться!"
+    show mi normal2 head1center legs1 dress
+    colm "Что же, пошли."
+    window hide
+    stop ambience fadeout 1
+    scene bg train_day with pattern right_pattern
+    play ambience train_interior fadein 2
+    "Мы решили зайти в тот же бар, где у меня была неприятная ситуация день назад."
+    "Как бы там не повторилось чего-нибудь снова..."
+    "Дорога была дальняя, и никто нам не хотел уступать место."
+    "Куча людей, скорее всего, ехала в тот самый парк, о котором заикнулся мой коллега."
+    "Хотя пока погода благоволит, то почему бы и нет, верно?"
+    window hide
+    stop ambience fadeout 1
+    time sunset
+    scene bg bar_inside_people with fade
+    "Уже через час-полтора времени я сидел и обсуждал начальство вместе с моим товарищем по несчастью."
+    "За других говорить неправильно, но я на все сто два процента уверен, что он считает аналогично."
+    show mi normal head1center legs1 dress
+    my "В этот раз здесь уже многовато народу."
+    show mi normal head1center legs1 dress yes
+    "Коллега утвердительно кивнул."
+    colm "С другой стороны, сейчас же выходной, вот и многие не прочь напиться до белочки."
+    my "И то верно..."
+    "Диалог зашёл в тупик."
+    my "Теперь это место будет мне напоминать о том роковом моменте моей жизни."
+    my "О самом жестком отказе!"
+    "Я скорчил печальную рожицу с небольшим налётом иронии."
+    show mi normal head2left legs1 dress
+    colm "Покривлялся? <w>Давай поговорим на более нормальные темы."
+    if $lp_ca==3
+    {
+    goto fourth_6    
+    }
+    else
+    {
+    goto fourth_7    
+    }
+
+label fourth_6:
+    "ааа"
+    
+    
+    
+    
+    
+    
     window hide
     stop music fadeout 5
     stop ambience fadeout 5
     scene color black with fade3
     pause 2
     load day5 bad_end
+    
+    
+label fourth_7:    
+    "Нарывается, однозначно."
+    "Но сейчас действительно лучше поговорить на другие темы."
+    my "О, у меня как раз есть случай, от которого ты повалишься со стула."
+    show mi smile head1center legs1 dress
+    colm "Предполагаю, что будет что-то смешное!"
+    my "А вот сейчас и расскажу!"
+    "..."
+    window hide
+    stop ambience fadeout 1
+    window hide
+    scene bg tokyo_street2_sunset with fade
+    play ambience outside_sunset fadein 2
+    "Мы просидели ещё немного времени, распрощались и разошлись."
+    "А неплохой был день ведь, давно таких у меня не было."
+    goto fourth_neutral_end
+    
+    
+    
     
     
     
@@ -275,6 +350,9 @@ label fourth_4:
     "Дорога была дальней, в метро куча людей ехала по домам."
     "Среди них я не был исключением."
     "Даже сейчас понимаю, что достаточно приятно провёл эти выходные."
+    goto fourth_neutral_end
+    
+label fourth_neutral_end:    
     window hide
     stop music fadeout 1
     scene bg house_mc_sunset with dissolve
@@ -289,7 +367,7 @@ label fourth_4:
     "А я..."
     "А что я?"
     "Я продолжу существовать в этом мире, как и все другие 5 миллиардов мне подобных."
-    "Увы, это была моя история."
+    "Это была моя история."
     "История маленького, ничего не значащего человека в глобальных масштабах."
     "Но свою историю сможете писать только вы!"
     "Действуйте, у вас есть все шансы!"
@@ -315,6 +393,13 @@ label neutral_end:
     }
     
     
+    
+    
+    
+    
+    
+    
+   
     
     
 label fourth_secret:
@@ -394,6 +479,7 @@ label fourth_secret:
     scene bg room_mc_day with fade3
     window show
     "Когда я проснулся, у меня возникло чувство, что моя жизнь перевернулась с ног на голову одним сеансом сна."
+    "Проснулся не там, где должен был, как минимум."
     "Я услышал, что на кухне кто-то есть и явно возится у плиты."
     window hide
     play music yamayka
