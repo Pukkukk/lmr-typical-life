@@ -1,0 +1,4 @@
+label thanks:
+    overlay_img backersintro fade 4
+    pause 7
+    overlay_img remove fade 4
