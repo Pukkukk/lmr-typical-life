@@ -5,7 +5,7 @@
     day3: text/day3.txt
     day4: text/day4.txt
     day5: text/day5.txt
-    end_bad_1: text/end_bad_1.txt
+    thanks: text/thanks.txt
     
   sound:
     yamayka: music/yamayka.mp3
@@ -25,18 +25,17 @@
         <line-height=50%><style="credits-head">Разработчик:</style>
         <style="credits-name">Кефир</style>
         
-       
+        <line-height=50%><style="credits-head">Альфа-тестеры:</style>
+        <style="credits-name">Саня Альцгеймер</style>
+        
+        <style="credits-name">Серый</style>
        
         <line-height=50%><style="credits-head">Благодарности:</style>
         <style="credits-name"><u>Soviet Games</style></u>
         
         <style="credits-name"><u>LMR Scenario Editor</style></u>
         
-        <style="credits-name">Саня Альцгеймер</style>
-        
         <style="credits-name">Gomes</style>
-        
-        <style="credits-name">Серый</style>
         
         <style="credits-name">Петька Иванович</style>
     
@@ -127,6 +126,7 @@
       thoughts:
       the_finest_hour:
       sunset_horizons:
+      lonely_train_to_odaiba:
       a_painful_story:
       to_die_or_not_to_die:
       
