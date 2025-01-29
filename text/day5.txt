@@ -69,22 +69,38 @@ label end_bad_2_1:
     creditsmode true
     window hide
     pause 10
-    play music to_die_or_not_to_die forceloop false
-    
-    rollcredits 129
-    {
-    pause 29
-    scene bg blackblue with dissolve 10 true skip
-    pause 29
-    scene bg blackpurple with dissolve 10 true skip
-    pause 30
-    scene bg blackred with dissolve 10 true skip
-    pause 30
-    scene color black with dissolve 11 true skip
-    }
-    
+   # play music to_die_or_not_to_die forceloop false
+    play music satellite_dishes forceloop false
     pause 2
     
+    rollcredits 210
+    {
+    pause 101
+    scene bg blackblue with dissolve 10 true skip
+    pause 74
+    scene bg blackpurple with dissolve 10 true skip
+    pause 37
+    scene bg blackred with dissolve 5 true skip
+    pause 5
+    scene color black with dissolve 10 true skip
+    }
+    
+   # rollcredits 129
+   # {
+   # pause 29
+   # scene bg blackblue with dissolve 10 true skip
+   # pause 29
+   # scene bg blackpurple with dissolve 10 true skip
+   # pause 30
+   # scene bg blackred with dissolve 10 true skip
+   # pause 30
+   # scene color black with dissolve 11 true skip
+   # }
+    
+    stop music fadeout 7
+    pause 10
+    
+    load thanks thanks
     
     
     
