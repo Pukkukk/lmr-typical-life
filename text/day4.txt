@@ -1,11 +1,3 @@
-label fourth_0:
-    ww
-    
-    
-    
-    
-
-
 label fourth_1:
     scene bg black with fade3
     "Пьёшь много или очень много — похмелье настигнет тебя, не пытайся увернуться!"
@@ -242,10 +234,11 @@ label fourth_5:
     window hide
     stop ambience fadeout 1
     time sunset
+    play ambience bar fadein 2
     scene bg bar_inside_people with fade
     "Уже через час-полтора времени я сидел и обсуждал начальство вместе с моим товарищем по несчастью."
     "За других говорить неправильно, но я на все сто два процента уверен, что он считает аналогично."
-    show mi normal head1center legs1 dress
+    show mi normal head1center legs1 dress with dissolve
     my "В этот раз здесь уже многовато народу."
     show mi normal head1center legs1 dress yes
     "Коллега утвердительно кивнул."
@@ -269,6 +262,7 @@ label fourth_5:
 label fourth_6:
     my "А что тебе не нравится?"
     colm "Твой идиотизм."
+    stop ambience fadeout 1
     play music lonely_train_to_odaiba
     "Непонятно откуда взявшаяся агрессия воздушно-капельным путём перешла и мне."
     my "Какой идиотизм? Очнись, очки протёр хотя бы."
@@ -289,11 +283,67 @@ label fourth_6:
     colm "Не все подряд совершают это действие ОДНОМУ И ТОМУ ЖЕ ЧЕЛОВЕКУ НА ПРОТЯЖЕНИИ ГОДА!"
     colm "Господи, как ты меня задолбал!"
     colm "Чтоб мои глаза тебя больше не видели!"
-    stop music fadeout 2
+    stop music fadeout 1
     hide mi with dissolve
-    "Коллега ушёл, громко объясняя посетителям мои грехи."
-    
-    
+    "Коллега ушёл, громко оскорбляя меня всеми возможными ругательствами."
+    "И на меня напала апатия..."
+    "Я перестал слышать окружающую меня обстановку."
+    "Что я делаю не так?"
+    "Почему все отворачиваются от меня?"
+    "Даже родная мать уже не рада видеть сынка при его приезде."
+    ba "Эй..."
+    my "..."
+    ba "Эй!"
+    play ambience bar
+    show ba normal head1center legs1 with dissolve
+    "Я пришёл в себя и заметил рядом с собой бармена."
+    ba "Будешь пить или ты уже всё?"
+    my "Буду!"
+    "Я достал купюры и ударил ими об стол."
+    my "Давай мне всего понемногу за эти йены!"
+    show ba shocked head1center legs2
+    ba "Ух ты, а тебе плохо не будет? <w>Всё предоставлю, но подумай ещё раз..."
+    my "Неси уже!"
+    show ba sad head1center legs1
+    ba "Желание клиента — наше всё!.."
+    hide ba with dissolve
+    "Протяжно сказал он и тут же ушёл."
+    "Осталось только дождаться."
+    window hide
+    time night
+    scene bg bar_inside_people with fade
+    "Наконец спустя полчаса я получил себе большое количество алкоголя."
+    "Ну что же, оторвёмся!"
+    "Надеюсь у тебя там всё хреново, мой коллега!"
+    "Ведь у меня всё отлично!"
+    window hide
+    play sfx drinking_water
+    pause 10
+    stop sfx fadeout 2
+    window show
+    "Фух, хорошо пошла!"
+    "Аж спать расхотелось!"
+    "Надо ещё!"
+    window hide
+    play sfx drinking_water
+    pause 10
+    stop sfx fadeout 2
+    window show
+    posteffect chromaticaberration
+    "И давай ещё!"
+    window hide
+    play sfx drinking_water
+    pause 6
+    stop ambience fadeout 2
+    stop sfx fadeout 2
+    scene color black with fade2
+    "А дальше всё было в тумане."
+    "Помню, что начал задираться на посетителей..."
+    "Затем кидаться стаканами и бутылками..."
+    "А дальше пришли охранники и вышвырнули меня на помойку в переулок."
+    pas "Куда тебя так понесло?.."
+    pas "Дай бог, чтобы выжил..."
+    "Это было последнее что я услышал, и темнота с опьянением поглотили мой разум."
     
     
     
@@ -302,7 +352,7 @@ label fourth_6:
     stop ambience fadeout 5
     scene color black with fade3
     pause 2
-    load day5 bad_end
+    load day5 fifth
     
     
 label fourth_7:    

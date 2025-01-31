@@ -15,29 +15,37 @@
     wood_break: sfx/wood_break.mp3
     secret_end: music/secret_end.mp3
     
-# пикчи, которые можно выводить    
+# пикчи, которые можно выводить
   overlay_imgs:
     komar: images/komar.png
-# пикчи, которые можно выводить 
+    thanks: images/thanks.png
+# пикчи, которые можно выводить
 
   help:
     credits: |
         <line-height=50%><style="credits-head">Разработчик:</style>
         <style="credits-name">Кефир</style>
         
+        
+        
         <line-height=50%><style="credits-head">Альфа-тестеры:</style>
         <style="credits-name">Саня Альцгеймер</style>
         
         <style="credits-name">Серый</style>
-       
+          
+        
+        
+        <line-height=50%><style="credits-head">Бета-тестеры:</style>
+        <style="credits-name">Петька Иванович</style>
+        
+        <style="credits-name">Серый</style>
+          
+        
+        
         <line-height=50%><style="credits-head">Благодарности:</style>
         <style="credits-name"><u>Soviet Games</style></u>
         
         <style="credits-name"><u>LMR Scenario Editor</style></u>
-        
-        <style="credits-name">Gomes</style>
-        
-        <style="credits-name">Петька Иванович</style>
     
     
   entryPoint: day1
@@ -127,8 +135,9 @@
       the_finest_hour:
       sunset_horizons:
       lonely_train_to_odaiba:
-      a_painful_story:
       to_die_or_not_to_die:
+      a_painful_story:
+      satellite_dishes:
       
       
       yamayka: Ямайка

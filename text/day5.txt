@@ -1,15 +1,46 @@
-label bad_end:
+label fifth:
+    play music to_die_or_not_to_die
+    scene bg black with fade3
+    "Никогда ещё я так не напивался, как в этот раз."
+    "Но вот сейчас..."
+    window hide
+    scene bg bar_outside_day with fade3
+    "Я проснулся там же, где и заснул — у помойки."
+    "Воняло просто чудовищно, поэтому я поспешил поскорее уйти с этого места для отбросов общества."
+    posteffect chromaticaberration
+    "Но меня тут же накрыло ударом по голове."
+    "Нет, не созданным материальным объектом, а внутренним."
+    "Похмелье... <w>Хотя, я чувствую что-то похуже..."
+    "Болела серединка правого бока, причём очень сильно."
+    "Идти я мог маленькими шажками, так как любое движение отдавало невыносимой болью."
+    window hide
+    scene bg tokyo_street_day with dissolve
+    "Я еле смог выйти на основную улицу, где было практически пустынно."
+    "Даже помощи попросить не у кого!"
+    "Пока я медленно ковылял, держась за что попало, сзади я услышал вопрос:"
+    voice "С вами всё хорошо?"
+    show vlad normal hands1 legs1 with dissolve
+    "Рядом со мной стоял парень, явно не местный."
+    my "Знаешь как вызвать врачей?"
+    show vlad normal hands2 legs2
+    vlad "Понял, сейчас!"
+    hide vlad with dissolve
+    "Надеюсь, он хотя бы базовый японский понимает..."
+    "А я стоял и смотрел на моё слегка осунувшееся тело."
+    "Футболка не могла скрыть всех синяков, а руки так и вовсе почти все были в крови."
+    overlay_color #000000 fade 3 opacity 0.8 skip
+    "Я закашлял, и у меня в глазах начало темнеть."
+    voice "Они скоро будут!"
+    "Паренёк зря кричал, ведь я уже был не в здешнем мире..."
+    "..."
+    window hide
+    stop music fadeout 5
+    stop ambience fadeout 5
+    scene color black with fade3
+    goto bad_end
 
-    sequence black_red 
-    {
-    scene bg blackred with dissolve
-    }
-    
-    sequence black 
-    {
-    scene bg black with dissolve
-    }
-    
+label bad_end:
+    overlay_color clear fade 0
     mode nvl
     scene bg black with fade3
     "Всему приходит конец — рано или поздно."
@@ -30,7 +61,7 @@ label bad_end:
     "Меня постоянно клонило спать, но лежать приходилось очень долго."
     "Снов практически не было, поэтому приходилось довольствоваться кошмарами."
     clear
-    trigger black_red
+    scene bg blackred with dissolve
     "Существо, олицетворяющее смерть в балахоне и с косой в руках, неспешно шло ко мне."
     "Я пытался бежать, звать на помощь, но везде была только темнота, поглотившая всё живое и неживое вокруг меня."
     "Оно подходило ко мне, брало на руки и бросало в пустоту."
@@ -38,7 +69,7 @@ label bad_end:
     "Только холод, страх и ненависть, нарастающие с каждой секундой, проведённой в этом месте, душили изнутри."
     "А от пыли, витающей в этой среде, я начинал задыхаться."
     clear
-    trigger black
+    scene bg black with dissolve
     mrsv "Он будет жить?"
     pol2 "Уже нет."
     mrsv "И что мне делать? Он был моим лучшим работником!"
@@ -50,7 +81,7 @@ label bad_end:
     "Моя жизнь только в руках Всевышнего."
     "Только смилостивится ли он надо мной или же?.."
     clear
-    "Я не стал ничего менять и плыл по течению, попадая в замкнутый круг."
+    "Я не стал что-либо менять и плыл по течению, попадая в замкнутый круг."
     "Замкнутый круг..."
     "Можно ли вообще найти выход из него?"
     "Возможно, мне суждено реинкарнировать... только в кого? <w>В очередного всесильного героя из жанра японской анимации? <w>Нет уж, увольте!"
@@ -61,6 +92,7 @@ label bad_end:
     "... судьба?"
     stop music fadeout 8
     window hide
+    unlock_ending alone_bad
     pause 2
     goto end_bad_2_1
     
@@ -68,7 +100,7 @@ label end_bad_2_1:
 
     creditsmode true
     window hide
-    pause 10
+    pause 8
    # play music to_die_or_not_to_die forceloop false
     play music satellite_dishes forceloop false
     pause 2
@@ -98,9 +130,9 @@ label end_bad_2_1:
    # }
     
     stop music fadeout 7
-    pause 10
+    pause 12
     
-    load thanks thanks
+    load thanks thanks_bad
     
     
     

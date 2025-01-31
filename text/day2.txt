@@ -196,7 +196,7 @@ label second:
     play ambience bar fadein 1
     window show
     "Что сложнее: ожидание перед экзаменом или сам экзамен?"
-    "Конечно, писать тоже не слишком и легко, но ожидание тоже не сахар."
+    "Конечно, писать тоже не слишком то и легко, но ждать настолько же волнительно."
     play sfx door_bell_bar
     stop ambience fadeout 1
     show mi normal head1center legs1 dress with dissolve

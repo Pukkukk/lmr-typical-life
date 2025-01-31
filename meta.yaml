@@ -1,13 +1,13 @@
 ---
     title: 
-        ru: (Не)типичная жизнь
-        en: (Un)typical life
-        common: (Un)typical life
+        ru: Типичная жизнь
+        en: Typical life
+        common: Typical life
         
     description: 
-        ru: "История бывает разной: грустной, повседневной, романтической, детективной... Моя же будет (не)обычной."
-        en: "The story can be different: sad, casual, romantic, detective... Mine will be (un)usual."
-        common: "The story can be different: sad, casual, romantic, detective... Mine will be (un)usual."
+        ru: "История бывает разной: грустной, повседневной, романтической, детективной... Моя же будет самой обычной, но с небольшим подвохом."
+        en: "The story can be different: sad, everyday, romantic, detective... Mine will be the most ordinary, but with a little catch."
+        common: "The story can be different: sad, everyday, romantic, detective... Mine will be the most ordinary, but with a little catch."
         
     version: 1.0
     cover: base.png

@@ -1,4 +1,21 @@
 label thanks:
-    overlay_img backersintro fade 4
-    pause 7
-    overlay_img remove fade 4
+    creditsmode true
+    overlay_img thanks fade 4 skip
+    show hi surprise hands1 legs1 dress4 at cleft with dissolve 4
+    pause 3.5
+    show hi smile hands1 legs1 dress4
+    pause 3.5
+    overlay_img remove fade 4 skip
+    hide hi with dissolve 4
+    pause 4
+    
+label thanks_bad:
+    creditsmode true
+    overlay_img thanks fade 4 skip
+    show hi surprise hands1 legs1 dress4 at cleft with dissolve 4
+    pause 3.5
+    show hi sad hands1 legs1 dress4
+    pause 3.5
+    overlay_img remove fade 4 skip
+    hide hi with dissolve 4
+    pause 4    
