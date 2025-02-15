@@ -1,8 +1,0 @@
-label end_bad_1:  
-    creditsmode true
-    play music summertime
-    scene bg house_mc_day with dissolve 47
-    rollcredits 233
-    {
-    pause 233
-    }
