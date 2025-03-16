@@ -8,6 +8,7 @@ label thanks:
     overlay_img remove fade 4 skip
     hide hi with dissolve 4
     pause 4
+    goto ending
     
 label thanks_bad:
     creditsmode true
@@ -18,4 +19,9 @@ label thanks_bad:
     pause 3.5
     overlay_img remove fade 4 skip
     hide hi with dissolve 4
-    pause 4    
+    pause 4
+    goto ending
+
+label ending:
+    scene color black
+    
